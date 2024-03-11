@@ -18,7 +18,12 @@ function App() {
   }
 
   let handleCalculate = () => {
-    setDisplay(eval(display))
+    try{
+      setDisplay(eval(display))
+    } catch(error){
+      setDisplay("Error,Invalid input!!!")
+    }
+    
   }
 
   return (
